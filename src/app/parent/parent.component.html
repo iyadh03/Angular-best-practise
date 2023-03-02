@@ -1,0 +1,16 @@
+<form (ngSubmit)="Submit($event)" [formGroup]="form" novalidate>
+
+    <input type="text" formControlName="name" />
+    <button type="submit">show hero name</button>
+</form>
+<app-child *ngFor=" let name of Names " (voteResult)="resultat($event)" [name]="name"></app-child>
+<h1>nombre of agree {{agreed}}</h1>
+<h1>nombre of disagree {{disagree}}</h1>
+
+<app-counter-time-child></app-counter-time-child>
+<!--<button (click)="timer.start()">start</button>
+<button (click)="timer.stop()">stop</button>
+<h1>{{timer.seconds}}</h1>-->
+<button (click)="start()">start</button>
+<button (click)="stop()">stop</button>
+{{ seconds() }}
