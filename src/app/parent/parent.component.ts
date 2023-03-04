@@ -33,6 +33,7 @@ export class ParentComponent implements AfterViewInit {
       this.seconds = () => this.timercomponent.seconds,
       0);
   }
+  
   Submit(event: any) {
     console.log(event);
     console.log(this.form.controls.name.value);
